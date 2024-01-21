@@ -20,11 +20,11 @@ async def start(client, message):
     await db.add_user(client, message)
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            '💞 ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ 💞​', url='https://t.me/Anime_X_Hunters'),
+            'Aɴɪᴍᴇ Cʜᴀɴɴᴇʟ​', url='https://t.me/AnimeChidori'),
         InlineKeyboardButton(
-            '👋 ᴀɴɪᴍᴇ ᴅɪꜱᴄᴜꜱꜱɪᴏɴ 👋​', url='https://t.me/Hunters_Discussion')
+            'Aɴɪᴍᴇ Dɪꜱᴄᴜꜱꜱɪᴏɴ', url='https://t.me/Chidori_Discussion')
     ], [
-        InlineKeyboardButton('☃️ Aʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('🤖 Aʙᴏᴜᴛ', callback_data='about'),
     ]])
     if Config.START_PIC:
         await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
@@ -63,11 +63,11 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    '💞 ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ 💞', url='https://t.me/Anime_X_Hunters'),
+                    'Aɴɪᴍᴇ Cʜᴀɴɴᴇʟ​', url='https://t.me/AnimeChidori'),
                 InlineKeyboardButton(
-                    '👋 ᴀɴɪᴍᴇ ᴅɪꜱᴄᴜꜱꜱɪᴏɴ 👋​', url='https://t.me/Hunters_Discussion')
+                    'Aɴɪᴍᴇ Dɪꜱᴄᴜꜱꜱɪᴏɴ', url='https://t.me/Chidori_Discussion')
             ], [
-                InlineKeyboardButton('☃️ Aʙᴏᴜᴛ', callback_data='about')
+                InlineKeyboardButton('🤖 Aʙᴏᴜᴛ', callback_data='about')
             ]])
         )
     elif data == "about":
